@@ -4,7 +4,7 @@ const options = {
   url: 'https://api.twitch.tv/kraken/games/top',
   headers: {
     Accept: 'application/vnd.twitchtv.v5+json',
-    'Client-ID': 'i1syzqdx624i0h2q2xc6if1tyi0em5',
+    'Client-ID': 'i1syzqdx624i0h2q2xc6if1tyi0em5', // 非內建變數，所以 Client-ID 要括號起來
   },
 };
 
