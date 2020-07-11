@@ -13,13 +13,13 @@ HTTP status code 表達發出 request 後的狀況，是一套標準化後的號
 因此號碼代表某種意義，從開頭第一個號碼就能略知 request 發出後碰到哪種狀況：
 
 
-HTTP Status Code | 種類 | 意義 | 傳紙條訂便當的比喻 |
----------|------|-------|--------|-------|
- 1xx | informational responses | 發出的 request 已送到，但需要點時間處理 | 我有拿到紙條了，待會回覆 ｜
- 2xx | successful responses | 發出的 request 已被接收 | 收到紙條了，你要的東西沒問題！|
- 3xx | redirects | 需要有其他操作才能完成 request | 你要把紙條送到隔壁班的千千那裡才行 |
- 4xx | client errors | client 發生錯誤 | 只幫我們學校的訂便當喔，你不是我們學校的 |
- 5xx | server errors | 伺服器發生錯誤 | 抱歉，便當店臨時通知關店，所以沒有便當可訂 |
+|HTTP Status Code | 種類 | 意義 | 傳紙條訂便當的比喻 |
+|---------|------|-------|--------|-------|
+| 1xx | informational responses | 發出的 request 已送到，但需要點時間處理 | 我有拿到紙條了，待會回覆 ｜
+| 2xx | successful responses | 發出的 request 已被接收 | 收到紙條了，你要的東西沒問題！|
+| 3xx | redirects | 需要有其他操作才能完成 request | 你要把紙條送到隔壁班的千千那裡才行 |
+| 4xx | client errors | client 發生錯誤 | 只幫我們學校的訂便當喔，你不是我們學校的 |
+| 5xx | server errors | 伺服器發生錯誤 | 抱歉，便當店臨時通知關店，所以沒有便當可訂 |
 
 在 Lidemy 課程影片中有提到的 HTTP status code 有
 
@@ -52,10 +52,10 @@ HTTP Status Code | 種類 | 意義 | 傳紙條訂便當的比喻 |
 
 base URL: https://yen-taste.com (假連結勿試)
 
-| 說明 | Method ｜ path | 參數 | 範例 |
+| 說明 | Method | path | 參數 | 範例 |
 | --- | ------ | ----- | ---- | ----|
-| 回傳所有餐廳資料 | GET | /restaurants | _limit:限制回傳資料數量 | /restaurants?_limit=10 |
-| 回傳單一餐廳資料 | GET | /restaurants/:id | 無 | /restaurants/2 |
-| 刪除餐廳 | DELETE | /restaurants/:id | 無 | 無 |
-| 新增餐廳 | POST | /restaurants | 無 | name: 餐廳名稱, address: 地址, phone: 電話 | 無 |
-| 更改餐廳 | PATCH | /restaurants/:id | name: 餐廳名稱, address: 地址, phone: 電話 | 無 |
+| 回傳所有餐廳資料 | GET | `/restaurants` | `_limit:限制回傳資料數量` | `/restaurants?_limit=10` |
+| 回傳單一餐廳資料 | GET | `/restaurants/:id` | 無 | `/restaurants/2` |
+| 刪除餐廳 | DELETE | `/restaurants/:id` | 無 | 無 |
+| 新增餐廳 | POST | `/restaurants` | 無 | `name: 餐廳名稱, address: 地址, phone: 電話` | 無 |
+| 更改餐廳 | PATCH | `/restaurants/:id` | `name: 餐廳名稱, address: 地址, phone: 電話` | 無 |
