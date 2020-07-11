@@ -14,7 +14,7 @@ HTTP status code 表達發出 request 後的狀況，是一套標準化後的號
 
 
 |HTTP Status Code | 種類 | 意義 | 傳紙條訂便當的比喻 |
-|---------|------|-------|--------|-------|
+| -------- | ------ | ------- | -------- | ------- |
 | 1xx | informational responses | 發出的 request 已送到，但需要點時間處理 | 我有拿到紙條了，待會回覆 ｜
 | 2xx | successful responses | 發出的 request 已被接收 | 收到紙條了，你要的東西沒問題！|
 | 3xx | redirects | 需要有其他操作才能完成 request | 你要把紙條送到隔壁班的千千那裡才行 |
@@ -58,4 +58,4 @@ base URL: https://yen-taste.com (假連結勿試)
 | 回傳單一餐廳資料 | GET | `/restaurants/:id` | 無 | `/restaurants/2` |
 | 刪除餐廳 | DELETE | `/restaurants/:id` | 無 | 無 |
 | 新增餐廳 | POST | `/restaurants` | 無 | `name: 餐廳名稱, address: 地址, phone: 電話` | 無 |
-| 更改餐廳 | PATCH | `/restaurants/:id` | `name: 餐廳名稱, address: 地址, phone: 電話` | 無 |
+| 更改餐廳 | PATCH | `/restaurants/:id` | `name: 餐廳名稱, address: 地址, phone: 電話` | 無 |
