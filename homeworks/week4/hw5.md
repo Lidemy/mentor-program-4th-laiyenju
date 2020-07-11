@@ -13,7 +13,7 @@ HTTP status code 表達發出 request 後的狀況，是一套標準化後的號
 因此號碼代表某種意義，從開頭第一個號碼就能略知 request 發出後碰到哪種狀況：
 
 
-|HTTP Status Code | 種類 | 意義 | 傳紙條訂便當的比喻 |
+| HTTP Status Code | 種類 | 意義 | 傳紙條訂便當的比喻 |
 | -------- | ------ | ------- | -------- | ------- |
 | 1xx | informational responses | 發出的 request 已送到，但需要點時間處理 | 我有拿到紙條了，待會回覆 ｜
 | 2xx | successful responses | 發出的 request 已被接收 | 收到紙條了，你要的東西沒問題！|
