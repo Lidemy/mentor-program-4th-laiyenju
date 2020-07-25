@@ -159,9 +159,21 @@ nav li :hover {
   flex-direction: row;
 }
 
+.menu__img div {
+  width: 25%;
+}
+
+.menu__img img {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
+  .menu__img div {
+    width: 100%;
+  }
   .menu__img {
     flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -179,7 +191,11 @@ nav li :hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 35rem;
+  width: 33%;
+}
+
+.post ~ .post {
+  margin-left: 1rem;
 }
 
 .post__area {
@@ -201,6 +217,9 @@ nav li :hover {
 }
 
 @media screen and (max-width: 768px) {
+  .post {
+    width: 100%;
+  }
   .post__area {
     flex-direction: column;
     align-items: center;
@@ -208,6 +227,7 @@ nav li :hover {
 
   .post:not(:first-child){
     margin-top: 4rem;
+    margin-left: 0;
   }
 }
 
