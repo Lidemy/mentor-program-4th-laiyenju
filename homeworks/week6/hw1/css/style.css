@@ -1,0 +1,279 @@
+/* 
+root font-size = 16px 
+
+*/
+
+.wraper {
+  width: 92%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Questrial', 'Microsoft JhengHei';
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 2rem;
+  font-size: 2.25rem;
+  box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+}
+
+.logo {
+  font-size: 36px;
+  color: #489846;
+  font-family: 'Questrial', sans-serif;
+}
+
+nav li {
+  list-style: none;
+  display: flex;
+  box-sizing: border-box;
+  justify-items: row;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav li ul {
+  display: inline-block;
+  padding: 13px 20px;
+  margin-left: 0.6rem;
+  font-size: 1.125rem;
+}
+
+nav li :first-child {
+  color: #fefefe;
+  background-color: #ff7286;
+  border-radius: 8px;
+}
+
+nav li :hover {
+  color: #fefefe;
+  background-color: #ff7286;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin-top: 2rem;
+    justify-content: space-between;
+  }
+}
+
+/*banner*/
+.banner {
+  width: 100%;
+  height: 35rem;
+  background: border-box url("../img/2.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.banner h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+.banner::after {
+  /* banner mask */
+  content: '';
+  position: absolute;
+  background: #000000;
+  opacity: 0.25;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*option*/
+.section__title {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.section__title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+  border-left: solid #a3dea2 0.8rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.8rem;
+  display: inline-block;
+}
+
+.option p {
+  text-align: center;
+  line-height: 2rem;
+  margin-bottom: 4rem;
+}
+
+.option button {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3e613d;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.button__order {
+  background-color: #a8e8e1;
+}
+
+.button__orderlist {
+  background-color: #f9f9b5;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .option button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 1rem;
+  }
+}
+
+/*menu*/
+.menu__img {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu__img div {
+  width: 25%;
+}
+
+.menu__img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__img div {
+    width: 100%;
+  }
+  .menu__img {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/*review*/
+.post img {
+  height: 6rem;
+}
+
+.post {
+  border: solid 1px #c7e5ec;
+  border-radius: 5px;
+  box-shadow: -1.4px -1.4px 4px 0 #d8eaef;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+}
+
+.post ~ .post {
+  margin-left: 1rem;
+}
+
+.post__area {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.post__content {
+  font-size: 1rem;
+  padding: 2.5rem 2rem;
+  line-height: 2rem;
+  padding-top: 6rem;
+}
+
+.avatar {
+  position: absolute;
+  top: -3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .post {
+    width: 100%;
+  }
+  .post__area {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post:not(:first-child){
+    margin-top: 4rem;
+    margin-left: 0;
+  }
+}
+
+/*map*/
+
+/*footer*/
+.information {
+  background-color: #e8efee;
+  padding: 2.8rem 5rem;
+}
+
+.information p {
+  line-height: 1.5rem;
+  font-size: 0.87rem;
+}
+
+footer .wraper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.brand__info {
+  text-align: right;
+}
+
+.copyright {
+  background-color: #35564b;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  footer .wraper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  
+  .brand__info {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .copyright {
+    line-height: normal;
+  }
+}

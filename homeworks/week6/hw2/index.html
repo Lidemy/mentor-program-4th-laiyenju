@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新拖延運動報名表</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="web__background">
+    <div class="google__form">
+      <header>
+          <div class="container">
+            <h1>新拖延運動報名表單</h1>
+            <div class="information">
+              <p class="info__detail">
+                活動日期：2020/12/10 ~ 2020/12/11<br>
+                活動地點：台北市大安區新生南路二段1號<br>
+              </p>
+              <p class="attention">*必填</p>
+            </div>
+          </div>
+      </header>
+    
+      <div class="container">
+        <form action="" id="lazy__form">
+          <div class="nickname">
+            <label for="nickname" class="required">暱稱</label>
+            <input type="text" id="nickname" placeholder="您的回答">
+          </div>
+
+          <div class="email">
+            <label for="email__address" class="required">電子郵件</label>
+            <input type="email" id="email__address" placeholder="您的電子郵件">
+          </div>
+
+          <div class="phone">
+            <label for="phone__number" class="required">手機號碼</label>
+            <input type="text" id="phone__number" placeholder="您的手機號碼">
+          </div>
+    
+          <fieldset class="application__type">
+            <legend class="required"> 報名類型</legend>
+            <p>
+              <input type="radio" name="type" id="think" value="think">
+              <label for="think">躺在床上用想像力實作</label>
+            </p>
+            <p>
+              <input type="radio" name="type" id="phone" value="phone">
+              <label for="phone"> 趴在地上滑手機找現成的</label>
+            </p>
+          </fieldset>
+
+          <div class="channel">
+            <label for="news__channel" class="required">怎麼知道這個活動的？</label>
+            <input type="text" id="news__channel" placeholder="您的回答">
+          </div>
+
+          <div class="other">
+            <label for="other">其他</label>
+            <p>對活動的一些建議</p>
+            <input type="text" id="other" placeholder="您的回答">
+          </div>
+        </form>
+
+        <div class="form__bottom">
+          <button type="submit" form="lazy__form" value="Submit">提交</button>
+          <div class="reminder">
+            請勿透過表單送出您的密碼。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2020 © Copyright. All rights Reserved.</p>
+  </footer>
+    
+</body>
+</html>
