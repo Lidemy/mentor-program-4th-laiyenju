@@ -6,6 +6,7 @@
     <title>新拖延運動報名表</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="style.js"></script>
 </head>
 <body>
   <div class="web__background">
@@ -24,24 +25,27 @@
       </header>
     
       <div class="container">
-        <form action="" id="lazy__form">
-          <div class="nickname">
-            <label for="nickname" class="required">暱稱</label>
-            <input type="text" id="nickname" placeholder="您的回答">
+        <form action="" id="lazy__form" method="GET" action="">
+          <div class="nickname required hide__error">
+            <label for="nickname" class="title">暱稱</label>
+            <input name="nickname" type="text" id="nickname" placeholder="您的暱稱">
+            <div class="error_message">請輸入暱稱</div>
           </div>
 
-          <div class="email">
-            <label for="email__address" class="required">電子郵件</label>
-            <input type="email" id="email__address" placeholder="您的電子郵件">
+          <div class="email required hide__error">
+            <label for="email__address" class="title">電子郵件</label>
+            <input name="email" type="email" id="email__address" placeholder="您的電子郵件">
+            <div class="error_message">請輸入電子郵件</div>
           </div>
 
-          <div class="phone">
-            <label for="phone__number" class="required">手機號碼</label>
-            <input type="text" id="phone__number" placeholder="您的手機號碼">
+          <div class="phone required hide__error">
+            <label for="phone__number" class="title">手機號碼</label>
+            <input name="phone" type="text" id="phone__number" placeholder="您的手機號碼">
+            <div class="error_message">請輸入手機號</div>
           </div>
     
-          <fieldset class="application__type">
-            <legend class="required"> 報名類型</legend>
+          <fieldset class="application__type required hide__error">
+            <legend class="title"> 報名類型</legend>
             <p>
               <input type="radio" name="type" id="think" value="think">
               <label for="think">躺在床上用想像力實作</label>
@@ -50,26 +54,29 @@
               <input type="radio" name="type" id="phone" value="phone">
               <label for="phone"> 趴在地上滑手機找現成的</label>
             </p>
+            <div class="error_message">請選擇報名類型</div>
           </fieldset>
 
-          <div class="channel">
-            <label for="news__channel" class="required">怎麼知道這個活動的？</label>
-            <input type="text" id="news__channel" placeholder="您的回答">
+          <div class="channel required hide__error">
+            <label for="news__channel" class="title">怎麼知道這個活動的？</label>
+            <input name="channel" type="text" id="news__channel" placeholder="您的回答">
+            <div class="error_message">請輸入您的回答</div>
           </div>
 
           <div class="other">
             <label for="other">其他</label>
             <p>對活動的一些建議</p>
-            <input type="text" id="other" placeholder="您的回答">
+            <input name="suggestion" type="text" id="other" placeholder="您的回答">
+          </div>
+
+          <div class="form__bottom">
+            <button type="submit" form="lazy__form" value="Submit">提交</button>
+            <div class="reminder">
+              請勿透過表單送出您的密碼。
+            </div>
           </div>
         </form>
 
-        <div class="form__bottom">
-          <button type="submit" form="lazy__form" value="Submit">提交</button>
-          <div class="reminder">
-            請勿透過表單送出您的密碼。
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -77,6 +84,6 @@
   <footer>
     <p>© 2020 © Copyright. All rights Reserved.</p>
   </footer>
-    
+
 </body>
 </html>
