@@ -97,6 +97,7 @@ nav li :hover {
   display: flex;
   border-bottom: solid #a6e2c0 0.09em;
   padding: 2em 0.8em 2em 0.8em;
+  cursor: pointer;
 }
 
 .number {
