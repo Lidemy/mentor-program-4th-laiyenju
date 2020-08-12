@@ -7,17 +7,20 @@ const list = document.querySelector('.list__section');
 input.addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
     // listContent 是輸入的文字
-    const listContent = input.value;
-    // 新增列表，並將輸入的文字塞入列表
+    let listContent = input.value;
+    // 新增列表，並使用 insertBefore() 將輸入文字塞入列表的開頭
     const listItem = document.createElement('div');
-    list.appendChild(listItem);
+    list.insertBefore(listItem, list.childNodes[0]);
     listItem.outerHTML = `
     <div class="list__content">
+
       <input type="checkbox">
       <label class="list__text">${listContent}</label>
       <span class="material-icons remove">delete_outline</span>
     </div>
     `;
+    // 讓 input.value 為空字串，消除輸入框內的文字
+    input.value = '';
   }
 });
 
