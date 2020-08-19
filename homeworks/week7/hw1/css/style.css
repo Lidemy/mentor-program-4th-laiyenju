@@ -1,0 +1,132 @@
+body {
+    font-family: 'Microsoft JhengHei', arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  .web__background {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .google__form {
+    background-color: white;
+    width: 645px;
+    margin: 0 auto;
+    box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  header {
+    background-color: white;
+    border-top: solid #fad312 0.5rem;
+    vertical-align: bottom;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  section {
+    background-color: white;
+  }
+  
+  h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding-top: 4rem;
+  }
+  
+  .information{
+    padding-top: 2rem;
+  }
+  
+  .info__detail {
+    line-height: 2rem;
+  }
+  
+  .attention {
+    font-size: 1.1rem;
+    color: #e74149;
+    padding-top: 1.8rem;
+  }
+
+  .required .title::after {
+    content: "*";
+    font-size: 1.1rem;
+    color: #e74149;
+    margin-left: 0.2rem;
+  }
+  
+  form > div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 3rem;
+  }
+  
+  form > div > label {
+    font-size: 1.3rem;
+  }
+  
+  form > div > input {
+    border: solid 1px #d0d0d0;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    height: 2rem;
+  }
+  
+ .application__type {
+    margin-top: 3rem;
+  }
+  
+  legend {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  fieldset > p {
+    height: 2.2rem;
+  }
+  
+  .other p {
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+  }
+  
+  .form__bottom {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .error_message {
+    margin-top: 0.2em;
+    color: #e74149;
+  }
+
+  .hide__error .error_message{
+    visibility: hidden;
+  }
+  
+  button {
+    border-radius: 3px;
+    background-color: #fad312;
+    border: none;
+    font-size: 1rem;
+    padding: 0.4rem 1.8rem;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 1rem;
+  }
+  
+  footer {
+    background-color: black;
+    height: 3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

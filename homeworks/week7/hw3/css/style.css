@@ -1,0 +1,141 @@
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #3c3c3c;
+  height: 100%;
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+.wrap {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5em;
+  padding-top: 5em;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .wrap {
+    width: 88%;
+  }
+}
+
+.text__area {
+  padding-top: 2em;
+}
+
+#input__text {
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  border-bottom: solid 0.06em #979797;
+  width: 100%;
+  padding: 0.8em 1em 0.5em 0.5em;
+  background-color: #f5f5f5;
+}
+
+#input__text:hover {
+  background-color: #dedede;
+  border-bottom: solid 0.06em #3c3c3c;
+  transition: all 0.3s ease;
+}
+
+#input__text:focus {
+  background-color: #F5F5F5;
+  border-bottom: solid 0.08em #641BEB;
+  transition: all 0.5s ease;
+}
+
+#input__text::placeholder {
+  color: #979797;
+  font-size: 0.8em;
+}
+
+#input__text:focus::placeholder {
+  color: #641BEB;
+  font-size: 0.5em;
+  position: relative;
+  bottom: 2em;
+}
+
+#input__text:focus::-webkit-input-placeholder {/* Edge */
+  color: #641BEB;
+  font-size: 0.5em;
+  position: relative;
+  bottom: 2em;
+}
+
+#input__text:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #641BEB;
+  font-size: 0.5em;
+  position: relative;
+  bottom: 2em;
+}
+
+input[type='text'] {
+  font-size: 1.5em;
+}
+
+.list__section {
+  padding-top: 3em;
+}
+
+.list__content {
+  display: flex;
+  align-items: center;
+  padding: 1em 0.5em 1em 2em;
+  border: solid 0.06em #F5F5F5;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0.7em;
+}
+
+.list__content:hover {
+  border: solid 0.06em #641BEB;
+  transition: all 0.3s ease;
+}
+
+.list__section input {
+  width: 2.5em;
+  height: 2.5em;
+  cursor: pointer;
+  margin: 0;
+}
+
+.list__text {
+  font-size: 1.3em;
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 100%;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.remove {
+  cursor: pointer;
+  padding-right: 0.5em;
+}
+
+.remove:hover {
+  transform: scale(1.1);
+}
+
+.finish .list__text {
+  text-decoration:line-through;
+  color: #979797;
+}
+
+footer {
+  height: 3em;
+  width: 100%;
+  padding-top: 8em;
+}
+
+footer .info {
+  line-height: normal;
+  font-size: 0.8em;
+  text-align: center;
+}
