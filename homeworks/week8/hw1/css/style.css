@@ -1,8 +1,3 @@
-/* 
-root font-size = 16px 
-
-*/
-
 .wraper {
   width: 92%;
   margin: 0 auto;
@@ -84,8 +79,21 @@ nav li {
   position: relative;
 }
 
-.new__background {  /*抽獎結果的新 banner 圖片*/
-  background: border-box url("../img/bg.jpg") center/cover no-repeat;
+/*抽獎結果的新 banner 圖片*/
+.first__background {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/first-bg.jpg");
+}
+
+.second__background {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/second-bg.jpg");
+}
+
+.third__background {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/third-bg.jpg");
+}
+
+.none__background {
+  background: #000011;
 }
 
 /*informtaiton_card*/
@@ -138,7 +146,7 @@ nav li {
 }
 
 .item .content {
-  font-size: 1rem;  /*一直無法解決標題跟內文不對齊的問題*/
+  font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -149,7 +157,7 @@ nav li {
   text-align: left;
 }
   
-button {
+.card button {
   border-radius: 8px;
   background-color: #e62a45;
   border: none;
@@ -160,17 +168,19 @@ button {
   margin-top: 1.5rem;
 }
 
-button:hover {
+.card button:hover {
   cursor: pointer;
   background-color: #f81235;
 }
 
 @media screen and (max-width: 768px) {
   .card {
-    width: 80%;
+    width: 100%;
     left: 5%;
     right: 5%;
     top: 40%;
+    border-radius: 0;
+    border-top: solid gray 0.1em;
   }
 
   .card .title {
@@ -194,7 +204,7 @@ button:hover {
     font-size: small;
   }
 
-  button {
+  .card button {
     font-size: medium;
     padding: 1rem 0 1rem 0;
   }
@@ -205,10 +215,34 @@ button:hover {
   display: none;
 }
 
+.title {
+  font-weight: bold;
+  line-height: normal;
+  font-size: 1.5em;
+}
+
 .result {
   padding: 2em;
   font-weight: normal;
-  font-size: 1.25em;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-align: center;
+}
+
+.result button {
+  border-radius: 8px;
+  background-color: #e62a45;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 15em;
+  padding: 0.7rem 5rem;
+  margin-top: 1.5rem;
+}
+
+.result button:hover {
+  cursor: pointer;
+  background-color: #f81235;
 }
 
 /*footer*/

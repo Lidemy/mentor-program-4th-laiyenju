@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just A Bite!餐廳官網</title>
+  <title>Just A Bite!</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
@@ -46,11 +46,14 @@
             ❤ 參獎十名：知名 YouTuber 簽名握手會入場券一張(市價1500元)
           </div>
         </div>
+        <button class="origin__button"> 我要抽獎 </button>
       </div>
-      <div class="result hide">
-        恭喜你
-      </div>
-      <button> 我要抽獎 </button>
+    </div>
+    <!--要取代原頁面資訊的抽獎結果-->
+    <div class="result hide">
+      <div class="title">抽獎結果</div>
+      <!--讓抽獎結果頁的按鈕，點下後重新整理頁面的功能-->
+      <button class="result__button" onclick="javascript:window.location.reload()"> 再抽一次 </button>
     </div>
   </section>
 
