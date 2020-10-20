@@ -1,15 +1,26 @@
-/* eslint-disable no-alert, no-restricted-syntax */
-const clientId = 'i1syzqdx624i0h2q2xc6if1tyi0em5';
-const accept = 'application/vnd.twitchtv.v5+json';
-const errorMessage = '請再試一次';
+/* eslint-disable no-alert, no-restricted-syntax, prefer-template */
+const CLIENT_ID = 'i1syzqdx624i0h2q2xc6if1tyi0em5';
+const ACCEPT = 'application/vnd.twitchtv.v5+json';
+const API_URL = 'https://api.twitch.tv/kraken';
+const STREAM_TEMPLATE = `<div class="box">
+<a href="$url"><img src="$preview" class="box__screen"></a>
+<div class="box__bottom">
+    <img src="$logo" alt="icon" class="icon">
+    <div class="information">
+        <h5>$status</h5>
+        <p>$name</p>
+    </div>
+</div>
+</div>`;
+const ERROR_MESSAGE = '請再試一次';
 // 取用 Twitch Top5 API
 const requestTop5 = new XMLHttpRequest();
 
 const getTop5 = (callback) => {
-  const twitchTopAPI = 'https://api.twitch.tv/kraken/games/top?limit=5';
+  const twitchTopAPI = API_URL + '/games/top?limit=5';
   requestTop5.open('GET', twitchTopAPI, true);
-  requestTop5.setRequestHeader('Client-ID', clientId);
-  requestTop5.setRequestHeader('Accept', accept);
+  requestTop5.setRequestHeader('Client-ID', CLIENT_ID);
+  requestTop5.setRequestHeader('Accept', ACCEPT);
   // Event 開始
   requestTop5.onload = () => {
     if (requestTop5.status >= 200 && requestTop5.status < 400) {
@@ -19,12 +30,12 @@ const getTop5 = (callback) => {
       try {
         games = JSON.parse(requestTop5.response);
       } catch (err) {
-        callback(errorMessage);
+        callback(ERROR_MESSAGE);
         return;
       }
-      // 如果沒有 prize 的值
+      // 如果沒有 games.top 的值
       if (!games.top) {
-        callback(errorMessage);
+        callback(ERROR_MESSAGE);
         return;
       }
       // 確定沒出錯後，回傳 callBack 參數如下
@@ -32,7 +43,7 @@ const getTop5 = (callback) => {
     }
   };
   requestTop5.onerror = () => {
-    callback(errorMessage);
+    callback(ERROR_MESSAGE);
   };
   requestTop5.send();
 };
@@ -40,11 +51,11 @@ const getTop5 = (callback) => {
 // 取用 Twitch Stream API
 // 有兩種不同情況：一是首頁的全體 top20 直播，一個是個別遊戲的 top20 直播，需用 event delegation 監聽
 const requestStream = new XMLHttpRequest();
-let twitchStreamAPI = 'https://api.twitch.tv/kraken/streams?limit=20';
+let twitchStreamAPI = API_URL + '/streams?limit=20';
 const getStream = (callback) => {
   requestStream.open('GET', twitchStreamAPI, true);
-  requestStream.setRequestHeader('Client-ID', clientId);
-  requestStream.setRequestHeader('Accept', accept);
+  requestStream.setRequestHeader('Client-ID', CLIENT_ID);
+  requestStream.setRequestHeader('Accept', ACCEPT);
   // Event 開始
   requestStream.onload = () => {
     if (requestStream.status >= 200 && requestStream.status < 400) {
@@ -54,12 +65,12 @@ const getStream = (callback) => {
       try {
         streamGame = JSON.parse(requestStream.response);
       } catch (err) {
-        callback(errorMessage);
+        callback(ERROR_MESSAGE);
         return;
       }
-      // 如果沒有 prize 的值
+      // 如果沒有 streams 的值
       if (!streamGame.streams) {
-        callback(errorMessage);
+        callback(ERROR_MESSAGE);
         return;
       }
       // 確定沒出錯後，回傳 callBack 參數如下
@@ -67,7 +78,7 @@ const getStream = (callback) => {
     }
   };
   requestStream.onerror = () => {
-    callback(errorMessage);
+    callback(ERROR_MESSAGE);
   };
   requestStream.send();
 };
@@ -82,16 +93,12 @@ const showStream = () => {
     for (const stream of streams) {
       const box = document.createElement('div');
       document.querySelector('.content').appendChild(box);
-      box.outerHTML = `<div class="box">
-          <a href="${stream.channel.url}"><img src="${stream.preview.large}" class="box__screen"></a>
-          <div class="box__bottom">
-              <img src="${stream.channel.logo}" alt="icon" class="icon">
-              <div class="information">
-                  <h5>${stream.channel.status}</h5>
-                  <p>${stream.channel.name}</p>
-              </div>
-          </div>
-      </div>`;
+      box.outerHTML = STREAM_TEMPLATE
+        .replace('$url', stream.channel.url)
+        .replace('$preview', stream.preview.large)
+        .replace('$logo', stream.channel.logo)
+        .replace('$status', stream.channel.status)
+        .replace('$name', stream.channel.name);
     }
   });
 };
@@ -122,14 +129,15 @@ window.onload = () => {
     if (e.target.tagName.toLowerCase() === 'li') {
       // 更改頁面標題
       document.querySelector('.title h1').innerText = e.target.innerText;
-      twitchStreamAPI = `https://api.twitch.tv/kraken/streams/?game=${e.target.innerText}&limit=20`;
+      // 顯示點選遊戲 的 top20 直播
+      twitchStreamAPI = API_URL + `/streams/?game=${e.target.innerText}&limit=20`;
       showStream();
     } else if (e.target.className === 'website__name' || e.target.className === 'logo') {
     // 如果是點選 logo，回到首頁的配置
       // 更改頁面標題
       document.querySelector('.title h1').innerText = 'Welcome';
       // 顯示 Twitch 的 top20 直播
-      twitchStreamAPI = 'https://api.twitch.tv/kraken/streams?limit=20';
+      twitchStreamAPI = API_URL + '/streams?limit=20';
       showStream();
     }
   });
