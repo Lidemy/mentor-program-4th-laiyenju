@@ -12,7 +12,7 @@ Asynchronous JavaScript And XML，指的是可以跟伺服器非同步交換資�
 
 ## JSONP 是什麼？
 
-一種資料交換方式，是除了 CORS 跨來源資源共享以外，跨來源請求的另一種方法。
+一種資料交換方式，除了 CORS 跨來源資源共享以外，跨來源請求的另一種方法。
 JSONP 善用 script 不受同源政策影響的特點，在 script 中引入資料的連結，透過指定好的 function 取得資料回傳。
 
 **server 端**
