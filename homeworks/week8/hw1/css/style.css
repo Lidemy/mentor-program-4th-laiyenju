@@ -1,0 +1,291 @@
+.wraper {
+  width: 92%;
+  margin: 0 auto;
+  }
+  
+body {
+  font-family: 'Questrial', 'Microsoft JhengHei';
+}
+  
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 2rem;
+  font-size: 2.25rem;
+  box-shadow: -1.4px -1.4px 6px 0 #97a2a0;
+}
+  
+.logo {
+  font-size: 36px;
+  color: #489846;
+  font-family: 'Questrial', sans-serif;
+}
+  
+nav li {
+  list-style: none;
+  display: flex;
+  box-sizing: border-box;
+  justify-items: row;
+  align-items: center;
+  text-align: center;
+}
+  
+a {
+  text-decoration: none;
+}
+  
+nav li ul {
+  display: inline-block;
+  padding: 13px 20px;
+  margin-left: 0.6rem;
+  font-size: 1.125rem;
+}
+  
+nav li :first-child {
+  color: #fefefe;
+  background-color: #ff7286;
+  border-radius: 8px;
+}
+  
+nav li :hover {
+  color: #fefefe;
+  background-color: #ff7286;
+  border-radius: 8px;
+  cursor: pointer;
+}
+  
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+}
+  
+nav li {
+    margin-top: 2rem;
+    justify-content: space-between;
+  }
+}
+  
+/*banner*/
+.banner {
+  width: 100%;
+  height: 75vh;
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("../img/games-bn.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/*抽獎結果的新 banner 圖片*/
+.first__background {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/first-bg.jpg");
+}
+
+.second__background {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/second-bg.jpg");
+}
+
+.third__background {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/third-bg.jpg");
+}
+
+.none__background {
+  background: #000011;
+}
+
+/*informtaiton_card*/
+.card {
+  margin: 0 auto;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: 1rem 1.25rem;
+  width: 30rem;
+  text-align: center;
+}
+
+.card .list {
+  text-align: center;
+}
+  
+.card .title {
+  color: #5ec1b6;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.3rem;
+  letter-spacing: normal;
+  text-align: center;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card .item {
+  border-bottom: dotted #cdcdcd 0.09rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.item .label {
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #322929;
+  width: 25%;
+  text-align: left;
+}
+
+.item .content {
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #322929;
+  width: 65%;
+  text-align: left;
+}
+  
+.card button {
+  border-radius: 8px;
+  background-color: #e62a45;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 80%;
+  padding: 0.7rem 5rem;
+  margin-top: 1.5rem;
+}
+
+.card button:hover {
+  cursor: pointer;
+  background-color: #f81235;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+    left: 5%;
+    right: 5%;
+    top: 40%;
+    border-radius: 0;
+    border-top: solid gray 0.1em;
+  }
+
+  .card .title {
+    font-size: larger;
+    margin: 0 0 0 0;
+  }
+
+  .card .item {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .item .label {
+    width: 100%;
+    font-size: small;
+  }
+
+  .item .content {
+    width: 100%;
+    margin-top: 0.5em;
+    font-size: small;
+  }
+
+  .card button {
+    font-size: medium;
+    padding: 1rem 0 1rem 0;
+  }
+}
+
+/*lottery*/
+.hide {
+  display: none;
+}
+
+.title {
+  font-weight: bold;
+  line-height: normal;
+  font-size: 1.5em;
+}
+
+.result {
+  padding: 2em;
+  font-weight: normal;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-align: center;
+}
+
+.result button {
+  border-radius: 8px;
+  background-color: #e62a45;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 15em;
+  padding: 0.7rem 5rem;
+  margin-top: 1.5rem;
+}
+
+.result button:hover {
+  cursor: pointer;
+  background-color: #f81235;
+}
+
+/*footer*/
+.information {
+  background-color: #e8efee;
+  padding: 2.8rem 5rem;
+}
+  
+.information p {
+  line-height: 1.5rem;
+  font-size: 0.87rem;
+}
+  
+footer .wraper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+  
+.brand__info {
+  text-align: right;
+}
+  
+.copyright {
+  background-color: #35564b;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-align: center;
+}
+  
+@media screen and (max-width: 768px) {
+  footer .wraper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  
+  .brand__info {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .copyright {
+    line-height: normal;
+  }
+}
